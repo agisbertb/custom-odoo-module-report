@@ -1,0 +1,16 @@
+<odoo>
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document" priority="16">
+        <xpath expr="//div[@class='page']/h2" position="after">
+            <div class="row">
+                <div class="col-6 mt-4">
+                    <strong>Nombre d'articles:</strong>
+                    <p><t t-esc="doc.total_items"/></p>
+                </div>
+                <div class="col-6 mt-4">
+                    <strong>Adreça de correu:</strong>
+                    <p><t t-esc="doc.preferred_email"/></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

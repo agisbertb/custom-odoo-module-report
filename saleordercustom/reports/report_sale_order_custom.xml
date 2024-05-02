@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_sale_order_custom">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <h1 style="text-align: center;">Informe de Comandes Personalitzat</h1>
+                    <div style="margin-top: 32px;">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Comercial</th>
+                                <th>Estat de la comanda</th>
+                                <th>Nombre de comandes</th>
+                                <th>Suma total dels imports</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="docs" t-as="o">
+                                <td><span t-field="o.user_id.name"/></td>
+                                <td><span t-field="o.state"/></td>
+                                <td><span t-field="o.order_count"/></td>
+                                <td><span t-field="o.total_amount"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

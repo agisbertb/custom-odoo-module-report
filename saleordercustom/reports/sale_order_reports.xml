@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_report_sale_order_custom" model="ir.actions.report">
+            <field name="name">Informe Comandes Personalitzat</field>
+            <field name="model">sale.report.custom</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">saleordercustom.report_sale_order_custom</field>
+            <field name="report_file">saleordercustom.report_sale_order_custom</field>
+            <field name="print_report_name">'Informe de Comandes - ' + (object.user_id.name or '').replace('/', '-') </field>
+            <field name="binding_model_id" ref="model_sale_report_custom"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

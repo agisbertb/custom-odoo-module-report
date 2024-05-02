@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <!-- Menú principal bajo el menú de Ventas -->
+    <menuitem id="menu_sale_custom_reports" name="Informe Comandes Personalitzat"
+              parent="sale.sale_menu_root" sequence="99"/>
+
+    <!-- Submenú para acceder al informe personalizado -->
+    <menuitem id="menu_sale_order_report_custom" name="Informe"
+    parent="menu_sale_custom_reports" action="action_order_list_custom"/>
+
+</odoo>
